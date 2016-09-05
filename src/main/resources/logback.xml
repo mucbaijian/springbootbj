@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"-->
+    <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+    <!--xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee -->
+    <!--http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">-->
+
+<!--</faces-config>-->
+<configuration scan="true" scanPeriod="1 seconds">
+    <contextListerner class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListerner>
+    <jmxConfiguration/>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder></encoder>
+        <pattern>logback: %d{HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+    </appender>
+    <logger name="org.springframework.web" lever="DEBUG"></logger>
+    <root lever="info"></root>
+    <appender-ref ref="console"/>
+</configuration>
